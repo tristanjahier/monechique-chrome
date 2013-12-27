@@ -1,0 +1,14 @@
+/* http://code.google.com/chrome/extensions/i18n.html */
+
+{
+  "browser_action":
+  {
+    "message": "Monéchique: open the page",
+    "description": "Browser action message"
+  },
+  "monechique_credits":
+  {
+    "message": "Design edited thanks to \"Monéchique\" extension &#150; <a href=\"http://tristan-jahier.fr\" target=\"_blank\">Tristan Jahier</a> &copy; 2013",
+    "description": "Credits about this extension"
+  }
+}

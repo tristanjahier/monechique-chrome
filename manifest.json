@@ -1,0 +1,53 @@
+{
+  "manifest_version": 2,
+  "name": "Monéchique",
+  "version": "1.0",
+  "description": "Améliore le style du site de rechargement de la carte monétique du Crous de Rennes",
+  "icons":
+  {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+
+  "background":
+  {
+    "scripts": [ "js/bg.js" ]
+  },
+
+  // http://code.google.com/chrome/extensions/browserAction.html
+  "browser_action":
+  {
+    "name": "Open monetique in a new tab",
+    "default_icon":  "icons/icon48.png",
+    "default_title": "__MSG_browser_action__"
+  },
+
+  // http://code.google.com/chrome/extensions/manifest.html#permissions
+  "permissions": ["tabs"],
+
+  // http://developer.chrome.com/extensions/contentSecurityPolicy.html
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+
+  // http://code.google.com/chrome/extensions/content_scripts.html
+
+  "content_scripts":
+  [
+    {
+      "matches": ["https://monetique.central.crous-rennes.fr/CrousVAD/*"],
+      "css": ["css/style.css"],
+      "js": ["vendor/jquery/jquery-2.0.3.min.js", "js/script.js"]
+    }
+  ],
+
+  "web_accessible_resources":
+  [
+    "vendor/jquery/jquery-2.0.3.min.map",
+    "icons/icon_negative.png",
+    "icons/icon_negative48.png"
+  ]
+
+  // http://code.google.com/chrome/extensions/autoupdate.html
+  // "update_url": "http://myhost.com/mytestextension/updates.xml"
+}
