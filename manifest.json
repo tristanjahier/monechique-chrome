@@ -46,8 +46,8 @@
     "vendor/jquery/jquery-2.0.3.min.map",
     "icons/icon_negative.png",
     "icons/icon_negative48.png"
-  ]
+  ],
 
   // http://code.google.com/chrome/extensions/autoupdate.html
-  // "update_url": "http://myhost.com/mytestextension/updates.xml"
+  "update_url": "http://apps.tristan-jahier.fr/monechique/updates.xml"
 }
